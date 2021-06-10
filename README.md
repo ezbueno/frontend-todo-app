@@ -23,6 +23,7 @@
 * Foi criado uma API Rest usando Java com Spring Boot 2.x.x e banco de dados MySQL. 
 * Foi utilizado o JPA com Hibernate para mapeamento objeto-relacional.
 * Validação de dados, tratamento de exceções, uso adequado do protocolo HTTP no padrão REST.
+* https://github.com/ezbueno/backend-todo-app
 
 # VISÃO TÉCNICA - FRONT-END:
 * Além do back-end, o front-end foi desenvolvido utilizando o Angular 12. 
