@@ -40,4 +40,11 @@ export class AppComponent implements OnInit {
       this.findAll();
     });
   }
+
+  done(todo: Todo): void {
+    this.service.markAsDone(todo.id).subscribe((updatedTodo) => {
+      todo.done = updatedTodo.done;
+      todo.doneDate = updatedTodo.doneDate;
+    });
+  }
 }

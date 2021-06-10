@@ -18,19 +18,11 @@
   <div class="row">
     <div class="col-md-7">
       <ul class="list-group">
-        <li
-          *ngFor="let todo of todos"
-          class="
-            list-group-item
-            d-flex
-            justify-content-between
-            align-items-center
-          "
-        >
-          {{ todo.description }}
+        <li *ngFor="let todo of todos" class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="{{ todo.done ? 'done' : '' }}">{{ todo.description }} {{ todo.doneDate }}</span>
           <div>
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-success">Done</button>
+              <button type="button" class="btn btn-success" [disabled]="todo.done" (click)="done(todo)">Done</button>
               <button type="button" class="btn btn-danger" (click)="delete(todo)">Delete</button>
             </div>
           </div>
