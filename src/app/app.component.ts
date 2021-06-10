@@ -34,4 +34,10 @@ export class AppComponent implements OnInit {
       this.form.reset();
     });
   }
+
+  delete(todo: Todo): void {
+    this.service.delete(todo.id).subscribe(() => {
+      this.findAll();
+    });
+  }
 }

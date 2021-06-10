@@ -21,4 +21,9 @@ export class TodoService {
     const url = `${this.baseUrl}`;
     return this.http.post<Todo>(url, todo);
   }
+
+  delete(id: number): Observable<void> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<void>(url);
+  }
 }
